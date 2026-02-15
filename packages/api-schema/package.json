@@ -1,0 +1,32 @@
+{
+  "name": "@repo/api-schema",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/client.ts",
+        "default": "./src/client.ts"
+      }
+    }
+  },
+  "scripts": {
+    "generate": "openapi-typescript openapi.json -o src/schema.d.ts",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.13.0"
+  },
+  "devDependencies": {
+    "@repo/config-eslint": "workspace:^",
+    "@repo/config-typescript": "workspace:*",
+    "@repo/config-vitest": "workspace:*",
+    "openapi-typescript": "^7.0.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/config-typescript/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "preset", "recipes", "create-panda-config.ts"],
+  "exclude": ["node_modules", "dist", "styled-system"]
+}

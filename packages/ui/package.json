@@ -1,0 +1,121 @@
+{
+  "name": "@repo/ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./css": {
+      "types": "./styled-system/css/index.d.ts",
+      "import": "./styled-system/css/index.mjs"
+    },
+    "./jsx": {
+      "types": "./styled-system/jsx/index.d.ts",
+      "import": "./styled-system/jsx/index.mjs"
+    },
+    "./recipes": {
+      "types": "./styled-system/recipes/index.d.ts",
+      "import": "./styled-system/recipes/index.mjs"
+    },
+    "./tokens": {
+      "types": "./styled-system/tokens/index.d.ts",
+      "import": "./styled-system/tokens/index.mjs"
+    },
+    "./patterns": {
+      "types": "./styled-system/patterns/index.d.ts",
+      "import": "./styled-system/patterns/index.mjs"
+    },
+    "./types": {
+      "types": "./styled-system/types/index.d.ts"
+    },
+    "./panda-config": "./create-panda-config.ts",
+    "./create-panda-config": "./create-panda-config.ts",
+    "./postcss-config": "./postcss-config.mjs",
+    "./preset": "./preset/index.ts",
+    "./accordion": "./src/components/accordion.tsx",
+    "./alert": "./src/components/alert.tsx",
+    "./absolute-center": "./src/components/absolute-center.tsx",
+    "./avatar": "./src/components/avatar.tsx",
+    "./badge": "./src/components/badge.tsx",
+    "./breadcrumb": "./src/components/breadcrumb.tsx",
+    "./button": "./src/components/button.tsx",
+    "./card": "./src/components/card.tsx",
+    "./carousel": "./src/components/carousel.tsx",
+    "./checkbox": "./src/components/checkbox.tsx",
+    "./clipboard": "./src/components/clipboard.tsx",
+    "./close-button": "./src/components/close-button.tsx",
+    "./code": "./src/components/code.tsx",
+    "./collapsible": "./src/components/collapsible.tsx",
+    "./color-picker": "./src/components/color-picker.tsx",
+    "./combobox": "./src/components/combobox.tsx",
+    "./date-picker": "./src/components/date-picker.tsx",
+    "./dialog": "./src/components/dialog.tsx",
+    "./display-value": "./src/components/display-value.tsx",
+    "./drawer": "./src/components/drawer.tsx",
+    "./editable": "./src/components/editable.tsx",
+    "./field": "./src/components/field.tsx",
+    "./fieldset": "./src/components/fieldset.tsx",
+    "./file-upload": "./src/components/file-upload.tsx",
+    "./group": "./src/components/group.tsx",
+    "./heading": "./src/components/heading.tsx",
+    "./hover-card": "./src/components/hover-card.tsx",
+    "./icon": "./src/components/icon.tsx",
+    "./icon-button": "./src/components/icon-button.tsx",
+    "./image": "./src/components/image.tsx",
+    "./input": "./src/components/input.tsx",
+    "./input-addon": "./src/components/input-addon.tsx",
+    "./input-group": "./src/components/input-group.tsx",
+    "./kbd": "./src/components/kbd.tsx",
+    "./link": "./src/components/link.tsx",
+    "./loader": "./src/components/loader.tsx",
+    "./menu": "./src/components/menu.tsx",
+    "./number-input": "./src/components/number-input.tsx",
+    "./pagination": "./src/components/pagination.tsx",
+    "./pin-input": "./src/components/pin-input.tsx",
+    "./popover": "./src/components/popover.tsx",
+    "./progress": "./src/components/progress.tsx",
+    "./radio-card-group": "./src/components/radio-card-group.tsx",
+    "./radio-group": "./src/components/radio-group.tsx",
+    "./rating-group": "./src/components/rating-group.tsx",
+    "./scroll-area": "./src/components/scroll-area.tsx",
+    "./segment-group": "./src/components/segment-group.tsx",
+    "./select": "./src/components/select.tsx",
+    "./skeleton": "./src/components/skeleton.tsx",
+    "./slider": "./src/components/slider.tsx",
+    "./span": "./src/components/span.tsx",
+    "./spinner": "./src/components/spinner.tsx",
+    "./splitter": "./src/components/splitter.tsx",
+    "./switch": "./src/components/switch.tsx",
+    "./table": "./src/components/table.tsx",
+    "./tabs": "./src/components/tabs.tsx",
+    "./tags-input": "./src/components/tags-input.tsx",
+    "./text": "./src/components/text.tsx",
+    "./textarea": "./src/components/textarea.tsx",
+    "./toast": "./src/components/toast.tsx",
+    "./toggle-group": "./src/components/toggle-group.tsx",
+    "./tooltip": "./src/components/tooltip.tsx"
+  },
+  "scripts": {
+    "build": "panda codegen",
+    "dev": "panda codegen --watch",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ark-ui/react": "^5.0.0",
+    "lucide-react": "^0.460.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.52.0",
+    "@park-ui/panda-preset": "^0.42.0",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": ">=19"
+  }
+}

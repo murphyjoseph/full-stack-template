@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// @SETUP Consider your production deployment model
+// SQLite is GREAT for:
+//   - Single-server deployments (Railway, Fly.io, VPS)
+//   - Read-heavy workloads
+//   - Apps using Turso, LiteFS, or Cloudflare D1
+// Switch to Postgres/MySQL if you need:
+//   - Multi-server horizontal scaling
+//   - High write concurrency
+//   - Complex distributed queries
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

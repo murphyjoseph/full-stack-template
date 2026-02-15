@@ -1,0 +1,12 @@
+{
+  "$schema": "https://park-ui.com/schema/components.json",
+  "framework": "react",
+  "panda": {
+    "config": "panda.config.ts"
+  },
+  "aliases": {
+    "components": "~/components",
+    "recipes": "~/recipes",
+    "ui": "~/src/components"
+  }
+}

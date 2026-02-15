@@ -1,0 +1,37 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "config": {
+    "port": 3000
+  },
+  "scripts": {
+    "dev": "panda --watch & next dev --port 3000",
+    "build": "panda && next build",
+    "start": "next start",
+    "lint": "eslint --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/api-schema": "workspace:*",
+    "@repo/platform-logger": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.0.0",
+    "next": "16.1.5",
+    "openapi-react-query": "^0.3.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.52.0",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "^9.39.1",
+    "openapi-fetch": "^0.13.0",
+    "typescript": "5.9.2"
+  }
+}
