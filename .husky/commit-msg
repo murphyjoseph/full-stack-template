@@ -1,4 +1,2 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-pnpm commitlint --edit $1
+eval "$(mise activate bash --shims)" 2>/dev/null || true
+pnpm commitlint --edit "$1"
