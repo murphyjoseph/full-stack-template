@@ -6,14 +6,20 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "test": "turbo run test",
     "test:e2e": "pnpm --filter @repo/ui build && playwright test",
     "generate:types": "pnpm --filter server generate:openapi && pnpm --filter @repo/api-schema generate",
-    "nuke": "rm -rf node_modules .turbo apps/*/node_modules apps/*/.turbo apps/*/.next apps/*/styled-system packages/*/node_modules packages/*/.turbo packages/ui/styled-system"
+    "nuke": "rm -rf node_modules .turbo apps/*/node_modules apps/*/.turbo apps/*/.next apps/*/styled-system packages/*/node_modules packages/*/.turbo packages/ui/styled-system",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
     "@playwright/test": "^1.50.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "turbo": "^2.8.9",
     "typescript": "5.9.2",
@@ -24,5 +30,10 @@
     "node": ">=24",
     "npm": "use pnpm",
     "yarn": "use pnpm"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
