@@ -149,7 +149,7 @@ describe("error normalization", () => {
     logger.error("string error");
 
     const received = (handler.error as ReturnType<typeof vi.fn>).mock
-      .calls[0][0];
+      .calls[0]![0];
     expect(received).toBeInstanceOf(Error);
     expect(received.message).toBe("string error");
   });
@@ -162,7 +162,7 @@ describe("error normalization", () => {
     logger.error({ code: 404, reason: "not found" });
 
     const received = (handler.error as ReturnType<typeof vi.fn>).mock
-      .calls[0][0];
+      .calls[0]![0];
     expect(received).toBeInstanceOf(Error);
     expect(received.message).toBe('{"code":404,"reason":"not found"}');
   });
@@ -177,7 +177,7 @@ describe("error normalization", () => {
     logger.error(circular);
 
     const received = (handler.error as ReturnType<typeof vi.fn>).mock
-      .calls[0][0];
+      .calls[0]![0];
     expect(received).toBeInstanceOf(Error);
   });
 });
