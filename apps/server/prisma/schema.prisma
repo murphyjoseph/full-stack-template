@@ -13,6 +13,7 @@ generator client {
 //   - Complex distributed queries
 datasource db {
   provider = "sqlite"
+  // @prisma-ignore-next-line - Valid for Prisma 6.x (warning from Prisma 7 preview)
   url      = env("DATABASE_URL")
 }
 
